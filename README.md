@@ -1,18 +1,16 @@
 # AI-Powered Meeting Notes Summarizer
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://champion0g.github.io/meeting-summarizer/)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://ai-meeting-summarizer-demo.surge.sh)
 [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-blue)](https://github.com/champion0g/meeting-summarizer)
 
 A full-stack application that allows users to upload meeting transcripts, generate AI-powered summaries with custom prompts, edit the summaries, and share them via email.
 
 ## 🚀 Quick Start
 
-**To see the demo:**
-1. Push this code to GitHub: `git push origin main`
-2. Enable GitHub Pages: Repository → Settings → Pages → Source: main branch, /docs folder
-3. Visit: https://champion0g.github.io/meeting-summarizer/
+**Live Demo:** 🌐 **https://ai-meeting-summarizer-demo.surge.sh**
 
 **To run locally:**
+
 ```bash
 # Backend
 cd backend && npm install && npm run dev
@@ -23,11 +21,12 @@ cd frontend/meeting-summarizer && npm install && npm run dev
 
 ## 🌐 Live Demo
 
-### [🚀 **Try the Demo Now**](https://champion0g.github.io/meeting-summarizer/)
+### [🚀 **Try the Demo Now**](https://ai-meeting-summarizer-demo.surge.sh)
 
 > **Note**: The live demo runs in simulation mode with sample AI responses. For full AI functionality, deploy the backend following the instructions below.
 
 **Demo Features:**
+
 - ✅ Upload meeting transcripts or paste text
 - ✅ Try custom prompts (e.g., "Summarize for executives")
 - ✅ See simulated AI-powered summaries
@@ -47,11 +46,13 @@ cd frontend/meeting-summarizer && npm install && npm run dev
 ## Tech Stack
 
 ### Frontend
+
 - **React 19** with Vite
 - **Axios** for API calls
 - Basic CSS styling (functional, not design-focused)
 
 ### Backend
+
 - **Node.js** with Express
 - **Groq API** for AI summarization (Llama3-8b-8192 model)
 - **Nodemailer** for email functionality
@@ -60,6 +61,7 @@ cd frontend/meeting-summarizer && npm install && npm run dev
 ## Setup Instructions
 
 ### Prerequisites
+
 - Node.js (v16 or higher)
 - Groq API key (free at https://console.groq.com/)
 - Gmail account with App Password for email functionality
@@ -67,16 +69,19 @@ cd frontend/meeting-summarizer && npm install && npm run dev
 ### Backend Setup
 
 1. Navigate to the backend directory:
+
 ```bash
 cd backend
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Configure environment variables in `.env`:
+
 ```env
 PORT=5000
 GROQ_API_KEY=your_groq_api_key_here
@@ -85,6 +90,7 @@ EMAIL_PASS=your_gmail_app_password_here
 ```
 
 4. Start the backend server:
+
 ```bash
 npm run dev
 ```
@@ -94,16 +100,19 @@ The backend will run on http://localhost:5000
 ### Frontend Setup
 
 1. Navigate to the frontend directory:
+
 ```bash
 cd frontend/meeting-summarizer
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Start the development server:
+
 ```bash
 npm run dev
 ```
@@ -113,9 +122,11 @@ The frontend will run on http://localhost:5173
 ## API Endpoints
 
 ### POST /api/summarize
+
 Generates AI summary from transcript text.
 
 **Request Body:**
+
 ```json
 {
   "text": "Meeting transcript content...",
@@ -124,6 +135,7 @@ Generates AI summary from transcript text.
 ```
 
 **Response:**
+
 ```json
 {
   "summary": "Generated summary content..."
@@ -131,9 +143,11 @@ Generates AI summary from transcript text.
 ```
 
 ### POST /api/email
+
 Sends summary via email to specified recipients.
 
 **Request Body:**
+
 ```json
 {
   "recipients": ["email1@example.com", "email2@example.com"],
@@ -143,6 +157,7 @@ Sends summary via email to specified recipients.
 ```
 
 **Response:**
+
 ```json
 {
   "message": "Email sent successfully"
@@ -167,11 +182,13 @@ Sends summary via email to specified recipients.
 ## Environment Configuration
 
 ### Groq API Setup
+
 1. Sign up at https://console.groq.com/
 2. Create a new API key
 3. Add the key to your `.env` file
 
 ### Gmail Setup for Email Sharing
+
 1. Enable 2-factor authentication on your Gmail account
 2. Generate an App Password: Google Account → Security → App passwords
 3. Use your Gmail address and the app password in the `.env` file
@@ -179,6 +196,7 @@ Sends summary via email to specified recipients.
 ## Deployment Notes
 
 For production deployment:
+
 - Set environment variables on your hosting platform
 - Update the frontend API base URL to your deployed backend URL
 - Ensure CORS is properly configured for your domain
