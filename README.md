@@ -1,13 +1,26 @@
 # AI-Powered Meeting Notes Summarizer
 
+## 🚀 **[LIVE DEMO →](https://ai-meeting-summarizer-demo.surge.sh)**
+
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://ai-meeting-summarizer-demo.surge.sh)
 [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-blue)](https://github.com/champion0g/meeting-summarizer)
 
 A full-stack application that allows users to upload meeting transcripts, generate AI-powered summaries with custom prompts, edit the summaries, and share them via email.
 
+## 🌐 **LIVE DEMO**
+### 👉 **[https://ai-meeting-summarizer-demo.surge.sh](https://ai-meeting-summarizer-demo.surge.sh)** 👈
+
+> Try uploading a meeting transcript and see AI-powered summarization in action!
+
+## 📋 **Quick Links**
+- 🌐 **[Live Demo](https://ai-meeting-summarizer-demo.surge.sh)** - Try it now!
+- 📂 **[Source Code](https://github.com/champion0g/meeting-summarizer)** - View on GitHub
+- 📖 **[Setup Guide](#setup-instructions)** - Run locally
+- 🚀 **[Deployment Guide](DEPLOYMENT.md)** - Deploy your own
+
 ## 🚀 Quick Start
 
-**Live Demo:** 🌐 **https://ai-meeting-summarizer-demo.surge.sh**
+**Live Demo:** 🌐 **[https://ai-meeting-summarizer-demo.surge.sh](https://ai-meeting-summarizer-demo.surge.sh)**
 
 **To run locally:**
 
