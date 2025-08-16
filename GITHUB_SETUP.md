@@ -22,6 +22,13 @@ git push -u origin main
 
 Replace `YOUR_USERNAME` and `REPO_NAME` with your actual GitHub username and repository name.
 
+For your repository, use:
+```bash
+git remote add origin https://github.com/champion0g/meeting-summarizer.git
+git branch -M main
+git push -u origin main
+```
+
 ## Step 3: Verify Upload
 
 1. Refresh your GitHub repository page

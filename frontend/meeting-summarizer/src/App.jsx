@@ -241,7 +241,7 @@ Note: This is a demo version. To use real AI summarization, deploy the backend s
           <strong>🔴 Demo Mode:</strong> This is a live demo. AI summarization
           and email features are simulated.
           <a
-            href="https://github.com/YOUR_USERNAME/ai-meeting-summarizer"
+            href="https://github.com/champion0g/meeting-summarizer"
             target="_blank"
             rel="noopener noreferrer"
             style={{ color: "#007bff", marginLeft: "5px" }}

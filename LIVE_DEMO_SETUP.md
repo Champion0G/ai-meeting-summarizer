@@ -88,15 +88,15 @@ git subtree push --prefix backend heroku main
 
 After deployment, you'll have:
 
-1. **GitHub Pages Demo**: `https://YOUR_USERNAME.github.io/ai-meeting-summarizer/`
+1. **GitHub Pages Demo**: `https://champion0g.github.io/meeting-summarizer/`
 2. **Full App (if deployed)**: `https://your-app.vercel.app/`
 
 ## 📋 Repository Badge
 
 Add this to your README.md:
 ```markdown
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://YOUR_USERNAME.github.io/ai-meeting-summarizer/)
-[![Deploy](https://img.shields.io/badge/Deploy-Ready-blue)](https://github.com/YOUR_USERNAME/ai-meeting-summarizer)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://champion0g.github.io/meeting-summarizer/)
+[![Deploy](https://img.shields.io/badge/Deploy-Ready-blue)](https://github.com/champion0g/meeting-summarizer)
 ```
 
 ## 🎯 What Visitors Will See
