@@ -111,12 +111,12 @@ function App() {
     }
 
     setLoading(true);
-    
+
     // Demo mode for GitHub Pages
     if (DEMO_MODE) {
       // Simulate API delay
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+
       const demoSummary = `
 🔴 DEMO MODE - This is a simulated summary 🔴
 
@@ -129,11 +129,11 @@ Meeting Summary:
 • Decisions Made: Approved the new feature rollout for next month
 • Next Steps: Begin user testing phase and gather feedback
 
-${prompt ? `\nCustom Prompt Applied: "${prompt}"` : ''}
+${prompt ? `\nCustom Prompt Applied: "${prompt}"` : ""}
 
 Note: This is a demo version. To use real AI summarization, deploy the backend server and update the API configuration.
       `.trim();
-      
+
       setSummary(demoSummary);
       setLoading(false);
       return;
@@ -156,7 +156,9 @@ Note: This is a demo version. To use real AI summarization, deploy the backend s
       }
     } catch (error) {
       console.error("Error:", error);
-      setSummary("Failed to connect to server. Make sure the backend is running.");
+      setSummary(
+        "Failed to connect to server. Make sure the backend is running."
+      );
     }
     setLoading(false);
   };
@@ -176,12 +178,15 @@ Note: This is a demo version. To use real AI summarization, deploy the backend s
     }
 
     setEmailLoading(true);
-    
+
     // Demo mode for GitHub Pages
     if (DEMO_MODE) {
       // Simulate email sending delay
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      alert("🔴 DEMO MODE: Email functionality requires backend deployment. In the full version, this would send the summary to: " + recipients);
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+      alert(
+        "🔴 DEMO MODE: Email functionality requires backend deployment. In the full version, this would send the summary to: " +
+          recipients
+      );
       setShowEmailForm(false);
       setRecipients("");
       setEmailLoading(false);
@@ -189,17 +194,17 @@ Note: This is a demo version. To use real AI summarization, deploy the backend s
     }
 
     try {
-      const emailList = recipients.split(',').map(email => email.trim());
-      
+      const emailList = recipients.split(",").map((email) => email.trim());
+
       const response = await fetch(`${API_BASE_URL}/api/email`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ 
-          recipients: emailList, 
-          summary, 
-          subject: emailSubject 
+        body: JSON.stringify({
+          recipients: emailList,
+          summary,
+          subject: emailSubject,
         }),
       });
 
@@ -221,18 +226,26 @@ Note: This is a demo version. To use real AI summarization, deploy the backend s
   return (
     <div style={{ maxWidth: "800px", margin: "20px auto", padding: "20px" }}>
       <h1>AI Meeting Notes Summarizer</h1>
-      
+
       {DEMO_MODE && (
-        <div style={{ 
-          backgroundColor: "#fff3cd", 
-          border: "1px solid #ffeaa7", 
-          padding: "10px", 
-          borderRadius: "5px", 
-          marginBottom: "20px",
-          color: "#856404"
-        }}>
-          <strong>🔴 Demo Mode:</strong> This is a live demo. AI summarization and email features are simulated. 
-          <a href="https://github.com/YOUR_USERNAME/ai-meeting-summarizer" target="_blank" rel="noopener noreferrer" style={{ color: "#007bff", marginLeft: "5px" }}>
+        <div
+          style={{
+            backgroundColor: "#fff3cd",
+            border: "1px solid #ffeaa7",
+            padding: "10px",
+            borderRadius: "5px",
+            marginBottom: "20px",
+            color: "#856404",
+          }}
+        >
+          <strong>🔴 Demo Mode:</strong> This is a live demo. AI summarization
+          and email features are simulated.
+          <a
+            href="https://github.com/YOUR_USERNAME/ai-meeting-summarizer"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#007bff", marginLeft: "5px" }}
+          >
             View source code & setup instructions →
           </a>
         </div>
@@ -244,7 +257,12 @@ Note: This is a demo version. To use real AI summarization, deploy the backend s
         value={transcript}
         onChange={(e) => setTranscript(e.target.value)}
         rows={10}
-        style={{ width: "100%", marginBottom: "10px", padding: "8px", border: "1px solid #ccc" }}
+        style={{
+          width: "100%",
+          marginBottom: "10px",
+          padding: "8px",
+          border: "1px solid #ccc",
+        }}
       />
 
       {/* Option 2: Upload transcript file */}
@@ -260,33 +278,38 @@ Note: This is a demo version. To use real AI summarization, deploy the backend s
         placeholder="Enter custom prompt (e.g., 'Summarize in bullet points for executives' or 'Highlight only action items')"
         value={prompt}
         onChange={(e) => setPrompt(e.target.value)}
-        style={{ width: "100%", marginBottom: "10px", padding: "8px", border: "1px solid #ccc" }}
+        style={{
+          width: "100%",
+          marginBottom: "10px",
+          padding: "8px",
+          border: "1px solid #ccc",
+        }}
       />
 
-      <button 
-        onClick={handleGenerate} 
-        disabled={loading} 
-        style={{ 
-          marginRight: "10px", 
-          padding: "10px 20px", 
-          backgroundColor: loading ? "#ccc" : "#007bff", 
-          color: "white", 
-          border: "none", 
-          cursor: loading ? "not-allowed" : "pointer" 
+      <button
+        onClick={handleGenerate}
+        disabled={loading}
+        style={{
+          marginRight: "10px",
+          padding: "10px 20px",
+          backgroundColor: loading ? "#ccc" : "#007bff",
+          color: "white",
+          border: "none",
+          cursor: loading ? "not-allowed" : "pointer",
         }}
       >
         {loading ? "Generating..." : "Generate Summary"}
       </button>
 
-      <button 
+      <button
         onClick={handleShare}
         disabled={!summary}
-        style={{ 
-          padding: "10px 20px", 
-          backgroundColor: !summary ? "#ccc" : "#28a745", 
-          color: "white", 
-          border: "none", 
-          cursor: !summary ? "not-allowed" : "pointer" 
+        style={{
+          padding: "10px 20px",
+          backgroundColor: !summary ? "#ccc" : "#28a745",
+          color: "white",
+          border: "none",
+          cursor: !summary ? "not-allowed" : "pointer",
         }}
       >
         Share via Email
@@ -306,64 +329,78 @@ Note: This is a demo version. To use real AI summarization, deploy the backend s
 
       {/* Email Form Modal */}
       {showEmailForm && (
-        <div style={{ 
-          position: "fixed", 
-          top: 0, 
-          left: 0, 
-          width: "100%", 
-          height: "100%", 
-          backgroundColor: "rgba(0,0,0,0.5)", 
-          display: "flex", 
-          justifyContent: "center", 
-          alignItems: "center" 
-        }}>
-          <div style={{ 
-            backgroundColor: "white", 
-            padding: "20px", 
-            borderRadius: "8px", 
-            width: "400px" 
-          }}>
+        <div
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundColor: "rgba(0,0,0,0.5)",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <div
+            style={{
+              backgroundColor: "white",
+              padding: "20px",
+              borderRadius: "8px",
+              width: "400px",
+            }}
+          >
             <h3>Share Summary via Email</h3>
-            
+
             <input
               type="text"
               placeholder="Subject"
               value={emailSubject}
               onChange={(e) => setEmailSubject(e.target.value)}
-              style={{ width: "100%", marginBottom: "10px", padding: "8px", border: "1px solid #ccc" }}
+              style={{
+                width: "100%",
+                marginBottom: "10px",
+                padding: "8px",
+                border: "1px solid #ccc",
+              }}
             />
-            
+
             <textarea
               placeholder="Enter recipient emails (comma-separated)"
               value={recipients}
               onChange={(e) => setRecipients(e.target.value)}
               rows={3}
-              style={{ width: "100%", marginBottom: "10px", padding: "8px", border: "1px solid #ccc" }}
+              style={{
+                width: "100%",
+                marginBottom: "10px",
+                padding: "8px",
+                border: "1px solid #ccc",
+              }}
             />
-            
+
             <div style={{ display: "flex", gap: "10px" }}>
-              <button 
+              <button
                 onClick={handleSendEmail}
                 disabled={emailLoading}
-                style={{ 
-                  padding: "10px 20px", 
-                  backgroundColor: emailLoading ? "#ccc" : "#007bff", 
-                  color: "white", 
-                  border: "none", 
-                  cursor: emailLoading ? "not-allowed" : "pointer" 
+                style={{
+                  padding: "10px 20px",
+                  backgroundColor: emailLoading ? "#ccc" : "#007bff",
+                  color: "white",
+                  border: "none",
+                  cursor: emailLoading ? "not-allowed" : "pointer",
                 }}
               >
                 {emailLoading ? "Sending..." : "Send Email"}
               </button>
-              
-              <button 
+
+              <button
                 onClick={() => setShowEmailForm(false)}
-                style={{ 
-                  padding: "10px 20px", 
-                  backgroundColor: "#6c757d", 
-                  color: "white", 
-                  border: "none", 
-                  cursor: "pointer" 
+                style={{
+                  padding: "10px 20px",
+                  backgroundColor: "#6c757d",
+                  color: "white",
+                  border: "none",
+                  cursor: "pointer",
                 }}
               >
                 Cancel
@@ -377,4 +414,3 @@ Note: This is a demo version. To use real AI summarization, deploy the backend s
 }
 
 export default App;
-
