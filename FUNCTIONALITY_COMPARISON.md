@@ -3,6 +3,7 @@
 ## 🎭 **Frontend-Only Deployment (Demo Mode)**
 
 ### ✅ **What WORKS:**
+
 - **File Upload**: Upload .txt files ✅
 - **Text Input**: Paste meeting transcripts ✅
 - **Custom Prompts**: Enter any prompt you want ✅
@@ -13,13 +14,15 @@
 - **Professional UI**: Looks completely professional ✅
 
 ### 🎪 **What's SIMULATED:**
+
 - **AI Responses**: Pre-written realistic summaries (not real Groq API)
 - **Email Sending**: Shows success message but doesn't actually send
 
 ### 👀 **What Visitors See:**
+
 ```
-User uploads transcript → Clicks "Generate Summary" → 
-Gets realistic AI summary → Can edit it → 
+User uploads transcript → Clicks "Generate Summary" →
+Gets realistic AI summary → Can edit it →
 Can "send" via email (shows success message)
 ```
 
@@ -30,6 +33,7 @@ Can "send" via email (shows success message)
 ## 🚀 **Full-Stack Deployment (Production Mode)**
 
 ### ✅ **What WORKS (Everything Real):**
+
 - **File Upload**: Upload .txt files ✅
 - **Text Input**: Paste meeting transcripts ✅
 - **Custom Prompts**: Enter any prompt you want ✅
@@ -40,6 +44,7 @@ Can "send" via email (shows success message)
 - **Professional UI**: Looks completely professional ✅
 
 ### 🔥 **What's REAL:**
+
 - **AI Responses**: Real Groq API calls with Llama3 model
 - **Email Sending**: Actually sends emails via Gmail
 
@@ -50,6 +55,7 @@ Can "send" via email (shows success message)
 ### **Frontend-Only is PERFECT because:**
 
 1. **Shows ALL your skills:**
+
    - ✅ React development
    - ✅ File handling
    - ✅ API integration (structure)
@@ -58,6 +64,7 @@ Can "send" via email (shows success message)
    - ✅ Professional presentation
 
 2. **Looks completely professional:**
+
    - ✅ Realistic AI responses
    - ✅ Smooth user experience
    - ✅ All features appear to work
@@ -72,6 +79,7 @@ Can "send" via email (shows success message)
 ## 🤔 **The Reality:**
 
 **95% of people won't know it's simulated** because:
+
 - The UI is identical
 - The responses look real
 - The flow is smooth
@@ -80,13 +88,14 @@ Can "send" via email (shows success message)
 ## 💡 **My Strong Recommendation:**
 
 **Go with frontend-only deployment** because:
+
 - ✅ **FREE**
 - ✅ **5 minutes to deploy**
 - ✅ **Shows all your skills**
 - ✅ **Perfect for portfolio**
 - ✅ **Impressive demo**
 
-You can always mention: *"This demo runs in simulation mode. The full production version uses real AI APIs and costs ~$5/month to host."*
+You can always mention: _"This demo runs in simulation mode. The full production version uses real AI APIs and costs ~$5/month to host."_
 
 **This actually makes you look MORE professional** - showing you understand both development AND business considerations!
 
