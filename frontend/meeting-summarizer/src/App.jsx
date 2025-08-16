@@ -79,6 +79,7 @@
 // export default App;
 
 import React, { useState } from "react";
+import { API_BASE_URL, DEMO_MODE } from "./config";
 
 function App() {
   const [transcript, setTranscript] = useState("");
@@ -110,8 +111,36 @@ function App() {
     }
 
     setLoading(true);
+    
+    // Demo mode for GitHub Pages
+    if (DEMO_MODE) {
+      // Simulate API delay
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      const demoSummary = `
+🔴 DEMO MODE - This is a simulated summary 🔴
+
+Meeting Summary:
+• Key Discussion Points: The team discussed project milestones and upcoming deadlines
+• Action Items: 
+  - John to complete the frontend design by Friday
+  - Sarah to review the backend API documentation
+  - Team meeting scheduled for next Tuesday at 2 PM
+• Decisions Made: Approved the new feature rollout for next month
+• Next Steps: Begin user testing phase and gather feedback
+
+${prompt ? `\nCustom Prompt Applied: "${prompt}"` : ''}
+
+Note: This is a demo version. To use real AI summarization, deploy the backend server and update the API configuration.
+      `.trim();
+      
+      setSummary(demoSummary);
+      setLoading(false);
+      return;
+    }
+
     try {
-      const response = await fetch("http://localhost:5000/api/summarize", {
+      const response = await fetch(`${API_BASE_URL}/api/summarize`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -147,10 +176,22 @@ function App() {
     }
 
     setEmailLoading(true);
+    
+    // Demo mode for GitHub Pages
+    if (DEMO_MODE) {
+      // Simulate email sending delay
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      alert("🔴 DEMO MODE: Email functionality requires backend deployment. In the full version, this would send the summary to: " + recipients);
+      setShowEmailForm(false);
+      setRecipients("");
+      setEmailLoading(false);
+      return;
+    }
+
     try {
       const emailList = recipients.split(',').map(email => email.trim());
       
-      const response = await fetch("http://localhost:5000/api/email", {
+      const response = await fetch(`${API_BASE_URL}/api/email`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -180,6 +221,22 @@ function App() {
   return (
     <div style={{ maxWidth: "800px", margin: "20px auto", padding: "20px" }}>
       <h1>AI Meeting Notes Summarizer</h1>
+      
+      {DEMO_MODE && (
+        <div style={{ 
+          backgroundColor: "#fff3cd", 
+          border: "1px solid #ffeaa7", 
+          padding: "10px", 
+          borderRadius: "5px", 
+          marginBottom: "20px",
+          color: "#856404"
+        }}>
+          <strong>🔴 Demo Mode:</strong> This is a live demo. AI summarization and email features are simulated. 
+          <a href="https://github.com/YOUR_USERNAME/ai-meeting-summarizer" target="_blank" rel="noopener noreferrer" style={{ color: "#007bff", marginLeft: "5px" }}>
+            View source code & setup instructions →
+          </a>
+        </div>
+      )}
 
       {/* Option 1: Paste transcript manually */}
       <textarea

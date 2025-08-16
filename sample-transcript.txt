@@ -1,0 +1,27 @@
+Meeting: Weekly Team Standup
+Date: January 15, 2025
+Attendees: John Smith (PM), Sarah Johnson (Dev), Mike Chen (Designer), Lisa Wang (QA)
+
+John: Good morning everyone. Let's start with our weekly standup. Sarah, can you give us an update on the user authentication feature?
+
+Sarah: Sure. I've completed the login and registration functionality. The JWT token implementation is working well. I'm currently working on password reset functionality, which should be done by Thursday. One blocker - I need the email templates from Mike for the reset emails.
+
+Mike: I can get those to you by tomorrow morning. I've been working on the new dashboard design. The wireframes are complete and I've started on the high-fidelity mockups. I'll have the first version ready for review by Wednesday.
+
+Lisa: From QA perspective, I've finished testing the previous sprint's features. Found 3 minor bugs in the profile update section, already logged them in Jira. I'll start testing Sarah's authentication work once it's ready for QA environment.
+
+John: Great progress everyone. A few action items from this meeting:
+- Mike to send email templates to Sarah by tomorrow
+- Sarah to complete password reset by Thursday
+- Lisa to begin auth testing once deployed to QA
+- Team demo scheduled for Friday at 2 PM
+
+Any blockers or concerns? 
+
+Sarah: Just waiting on those email templates, otherwise I'm good.
+
+Mike: No blockers on my end.
+
+Lisa: All good here.
+
+John: Perfect. Let's reconvene same time next week. Thanks everyone!

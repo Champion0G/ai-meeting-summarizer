@@ -1,6 +1,13 @@
 # AI-Powered Meeting Notes Summarizer
 
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://YOUR_USERNAME.github.io/ai-meeting-summarizer/)
+[![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-blue)](https://github.com/YOUR_USERNAME/ai-meeting-summarizer)
+
 A full-stack application that allows users to upload meeting transcripts, generate AI-powered summaries with custom prompts, edit the summaries, and share them via email.
+
+## 🌐 [**Live Demo**](https://YOUR_USERNAME.github.io/ai-meeting-summarizer/)
+
+> **Note**: The live demo runs in simulation mode. For full AI functionality, deploy the backend following the instructions below.
 
 ## Features
 
