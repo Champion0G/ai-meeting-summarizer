@@ -5,9 +5,36 @@
 
 A full-stack application that allows users to upload meeting transcripts, generate AI-powered summaries with custom prompts, edit the summaries, and share them via email.
 
-## 🌐 [**Live Demo**](https://champion0g.github.io/meeting-summarizer/)
+## 🚀 Quick Start
 
-> **Note**: The live demo runs in simulation mode. For full AI functionality, deploy the backend following the instructions below.
+**To see the demo:**
+1. Push this code to GitHub: `git push origin main`
+2. Enable GitHub Pages: Repository → Settings → Pages → Source: main branch, /docs folder
+3. Visit: https://champion0g.github.io/meeting-summarizer/
+
+**To run locally:**
+```bash
+# Backend
+cd backend && npm install && npm run dev
+
+# Frontend (new terminal)
+cd frontend/meeting-summarizer && npm install && npm run dev
+```
+
+## 🌐 Live Demo
+
+### [🚀 **Try the Demo Now**](https://champion0g.github.io/meeting-summarizer/)
+
+> **Note**: The live demo runs in simulation mode with sample AI responses. For full AI functionality, deploy the backend following the instructions below.
+
+**Demo Features:**
+- ✅ Upload meeting transcripts or paste text
+- ✅ Try custom prompts (e.g., "Summarize for executives")
+- ✅ See simulated AI-powered summaries
+- ✅ Edit and modify generated summaries
+- ✅ Test email sharing interface
+
+> **If the demo link doesn't work yet**: You need to push this code to GitHub and enable GitHub Pages first. See the [GitHub Setup Guide](GITHUB_SETUP.md) below.
 
 ## Features
 
